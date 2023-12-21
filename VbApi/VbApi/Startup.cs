@@ -1,3 +1,6 @@
+using FluentValidation;
+using VbApi.Controllers;
+
 namespace VbApi;
 
 public class Startup
@@ -15,6 +18,9 @@ public class Startup
         
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
+
+        services.AddValidatorsFromAssemblyContaining<EmployeeValidator>();
+        services.AddValidatorsFromAssemblyContaining<StaffValidator>();
     }
     
     public void Configure(IApplicationBuilder app,IWebHostEnvironment env)
