@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "t7JIkpV3rkKv74jYSyDP6hB883wEsIf34OyP7Q8qAcao8Q00CcrIP8apk1cZbwgBZAJgZqWJ/Ce56QSUJ+qJ8Q==",
+  "dgSpecHash": "h8orCuGwxf0skyByaQCEsNoqbRjuMuGx0u4nTPAhtDVI65ziU5AgHPeDJFrU4tyTRm8yzI1B2K6vrkaY3RQnVA==",
   "success": true,
   "projectFilePath": "/home/uoy/projects/aw-1-UOzgurYildiz/VbApi/VbApi/VbApi.csproj",
   "expectedPackageFiles": [
+    "/home/uoy/.nuget/packages/fluentvalidation/11.8.1/fluentvalidation.11.8.1.nupkg.sha512",
+    "/home/uoy/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/home/uoy/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "/home/uoy/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/home/uoy/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/uoy/.nuget/packages/humanizer.core.af/2.14.1/humanizer.core.af.2.14.1.nupkg.sha512",
