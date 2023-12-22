@@ -45,8 +45,24 @@ public class EmployeeValidator : AbstractValidator <Employee>
         RuleFor(x => x.Email).EmailAddress().WithMessage("Email not valid");
         RuleFor(x => x.Phone).Matches(new Regex(@"((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}")).WithMessage("PhoneNumber not valid");
         //Regex from https://stackoverflow.com/questions/12908536/how-to-validate-the-phone-no
+        RuleFor(x => x).Must(x => MinLegalSalaryRequired(x));
         RuleFor(x => x.HourlySalary).InclusiveBetween(30, 400).WithMessage("Hourly salary must be between 30 to 400");
     }
+
+    private bool MinLegalSalaryRequired(Employee e)
+    {
+        var minJuniorSalary = 50;
+        var minSeniorSalary = 200;
+
+        var dateBeforeThirtyYears = DateTime.Today.AddYears(-30);
+        var isOlderThanThirtyYears = e.DateOfBirth <= dateBeforeThirtyYears;
+        var hourlySalary = e.HourlySalary;
+
+        var isValidSalary = isOlderThanThirtyYears ? hourlySalary >= minSeniorSalary : hourlySalary >= minJuniorSalary;
+
+        return isValidSalary;
+    }
+
 }
 
 //---------------ÖDEV BİTTİ------------------

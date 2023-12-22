@@ -19,8 +19,12 @@ public class Startup
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
 
+        //--------------ÖDEV BAŞLADI-------------------
+
         services.AddValidatorsFromAssemblyContaining<EmployeeValidator>();
         services.AddValidatorsFromAssemblyContaining<StaffValidator>();
+
+        //----------------ÖDEV BİTTİ------------------
     }
     
     public void Configure(IApplicationBuilder app,IWebHostEnvironment env)
