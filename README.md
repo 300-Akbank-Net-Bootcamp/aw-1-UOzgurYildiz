@@ -2,3 +2,8 @@
 
 
 Added fluent validation to Employee and Staff classes, tested with swagger.
+
+Edited files:
+  EmployeeController.cs -> added validation rules
+  StaffController.cs -> added validation rules
+  Startup.cs -> Added startup pipeline
